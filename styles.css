@@ -21,12 +21,12 @@
     perspective: 800px;
   }
   
-  .container:hover > .card {
+  .container:hover > .card1 {
     cursor: pointer;
     transform: rotateY(-180deg);
   }
   
-  .card {
+  .card1 {
     height: 100%;
     width: 100%;
     position: relative;
@@ -34,8 +34,8 @@
     transform-style: preserve-3d;
   }
   
-  .front,
-  .back {
+  .front1,
+  .back1 {
     height: 100%;
     width: 100%;
     border-radius: 2rem;
@@ -44,15 +44,15 @@
     backface-visibility: hidden;
   }
   
-  .front {
+  .front1 {
     background-image: url(https://www.staugustine.com/gcdn/presto/2021/12/14/NSAR/b0e563c2-e92b-489d-95d3-784d7ef3fddd-1225_ollie.jpg);
     display: flex;
     flex-direction: column;
     justify-content: top;
-    align-content: center;
+    text-align: center;
     }
   
-  .back {
+  .back1 {
     background-color: #3a3a3a;
     transform: rotateY(180deg);
     display: flex;
