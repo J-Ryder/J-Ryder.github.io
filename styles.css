@@ -19,6 +19,7 @@
     color: white;
     font-size: 5vh;
     margin-bottom: 0;
+    align-items: left;
   }
 
   /* Card Styling ========================================================================== */
@@ -67,9 +68,9 @@
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
-    gap: 5rem;
+    gap: 1rem;
   }
 
   /* Card Picture ========================================================================== */
@@ -92,5 +93,14 @@
     bottom: 0;
     height: auto;
     display: block;
+  }
+
+  .btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100px;
+    height: auto;
   }
 

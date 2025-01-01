@@ -7,22 +7,23 @@
 
 </head>
 <body>
+
     <div class="container">
-        <div class="card" onclick="flipCard(this)">
+        <div class="card" id="CheetaCard" onclick="flipCard(this)" >
             <div class="inner">
                 <div class="front">
                     <h1>Cheeta</h1>
                     <img src="Icons/Cheeta.png" class="profile-image" alt="Cheeta">
-                 <img src="Icons/Support.png" class="class-image" alt="Support">
+                    <img src="Icons/Support.png" class="class-image" alt="Support">
                  </div>
                 <div class="back">
-                    <h1>Back of card</h1>
-                    <p1>Additional info on the back of the card</p1>
+                    <h1>Cheeta</h1>
+                    <p id="CheetaOutput"></p>
                 </div>
             </div>
         </div>
 
-        <div class="card" onclick="flipCard(this)">
+        <div class="card" id="GrozaCard" onclick="flipCard(this)">
             <div class="inner">
                 <div class="front" >
                   <h1>Groza</h1>
@@ -30,18 +31,14 @@
                     <img src="Icons/Bulwark.png" class="class-image" alt="Bulwark">
                 </div>
                 <div class="back">
-                    <h1>Back of card</h1>
-                    <p1>Additional info on the back of the card</p1>
+                    <h1>Groza</h1>
+                    <p id="GrozaOutput"></p>
                 </div>
             </div>
         </div>
     </div>
     
-    <script>
-        function flipCard(card){
-        card.classList.toggle('flipped');
-        }
-    </script>
+    <script src="scripts.js"></script>
     
 </body>
 </html>
