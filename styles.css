@@ -23,10 +23,13 @@
 
   /* Card Styling ========================================================================== */
   .card-container {
+    display: flex;
+    flex-wrap: wrap;
     width: 350px;
     height: 500px;
+    gap: 20px;
     perspective: 800px;
-
+    justify-content: space-around;
   }
   .card {
     height: 100%;
@@ -82,3 +85,4 @@
     height: auto;
     display: block;
   }
+
