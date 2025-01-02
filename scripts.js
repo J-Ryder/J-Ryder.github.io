@@ -35,13 +35,13 @@ function parseCharacterData(text) {
         const characterObj = {};
 
         lines.forEach(line => {
-            if (line.starsWith("character:")) {
+            if (line.startsWith("character:")) {
                 characterObj.name = line.replace("character:", "").trim();
             }
-            else if (line.starsWith("class:")) {
+            else if (line.startsWith("class:")) {
                 characterObj.class = line.replace("class:", "").trim();
             }
-            else if (line.starsWith("attachment:")) {
+            else if (line.startsWith("attachment:")) {
                 characterObj.attachment = line.replace("attachment:", "").trim();
             }
         });
@@ -51,6 +51,15 @@ function parseCharacterData(text) {
         }
     });
     return data;
+}
+
+function displayAttachment(characterName) {
+    const character = characterData.find(c =>c.name ===characterName);
+
+    if (character) {
+        const outputElement = document.getElementById(`${characterName}Output`);
+        outputElement.textContent = character.attachment || "No attachment found";
+    }
 }
 
 loadCharacterFile();
