@@ -14,14 +14,20 @@
     justify-content: center;
     align-items: center;
   }
-  h1{
+  .character-name{
     margin-top: 1%;
     color: white;
     font-size: 5vh;
     margin-bottom: 0;
     align-items: left;
   }
-
+  .gun-name{
+    margin-top: 1%;
+    color: white;
+    font-size: 10px;
+    margin-bottom: 0;
+    align-items: left;
+  }
   /* Card Styling ========================================================================== */
   .container {
     display: flex;

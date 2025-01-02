@@ -2,93 +2,131 @@ character:Cheeta
 class:Support
 attachment:Phase Strike/Emergency Repair
 helix:1 2 3
+mainweapon:Heckler & Koch MP7
+desiredweapon:Echoes of Sorrow
 
 character:Colphne
 class:Support
 attachment:Emergency Repair
 helix:1 2 3
+mainweapon:Taurus Curve
+desiredweapon:Noisy Phantom
 
 character:Groza
 class:Bulwark
 attachment:Allay Support
 helix:1 4 6
+mainweapon:OTs-14 Groza
+desiredweapon:Guerno
 
 character:Krolik
 class:Vanguard
 attachment:Phase Strike
 helix:2 3 5
+mainweapon:Wild Rabbit
+desiredweapon:Crowned Jackelope
 
 character:Ksenia
 class:Support
 attachment:Emergency Repair
 helix:1 4 6
+mainweapon:Stechkin
+desiredweapon:Noisy Phantom
 
 character:Littara
 class:Sentinel
 attachment:Ballistic Boost
 helix:1 2 6
+mainweapon:Galil ARM
+desiredweapon:Optical Illusion
 
 character:Lotta
 class:Sentinel
 attachment:Ice Boost
 helix:1 3 5
+mainweapon:Benelli Super 90
+desiredweapon:Heart Seeker
 
 character:Mosin-Nagant
 class:Sentinel
 attachment:Ballistic Boost/Electric Boost (V4)
 helix:1 2 6
+mainweapon:M1891 Mosin-Nagant
+desiredweapon:Samosek
 
 character:Nagant
 class:Support
 attachment:Phase Strike
 helix:2 4 6
+mainweapon:Nagant M1895
+desiredweapon:Hestia
 
 character:Nemesis
 class:Sentinel
 attachment:Phase Strike
 helix:1 2 5
+mainweapon:OM 50 Nemesis
+desiredweapon:Arcana
 
 character:Papasha
 class:Sentinel
 attachment:N/A
 helix:N/A
+mainweapon:PPsh-41
+desiredweapon:Svarog
 
 character:Peritya
 class:Sentinel
 attachment:Phase Strike/Corrosion Boost
 helix:1 2 6
+mainweapon:PKP Pecheneg
+desiredweapon:Optical Illusion
 
 character:Qiongjiu
 class:Sentinel
 attachment:Fire Boost
 helix:3 4 5/1
+mainweapon:QBZ-191
+desiredweapon:Golden Melody
 
 character:Sabrina
 class:Bulwark
 attachment:Allay Support (Tank)/Ballistic Boost
 helix:1 2 4
+mainweapon:Franchi SPAS-12
+desiredweapon:Mezzaluna
 
 character:Sharkry
 class:Sentinel
 attachment:Phase Strike/Fire Boost
 helix:1 2 3
+mainweapon:Robinson Armament XCR
+desiredweapon:Planeta
 
 character:Suomi
 class:Support
 attachment:Emergency Repair(V1)/Ultimate Pursuit/Ballistic Boost
 helix:1 2 6
+mainweapon:Suomi
+desiredweapon:Unspoken Calling
 
 character:Tololo
 class:Sentinel
 attachment:Phase Strike(V1)/Riptide Boost (V2+)
 helix:1 2 3
+mainweapon:AK-Alfa
+desiredweapon:Planeta
 
 character:Ullrid
 class:Vanguard
 attachment:Ballistic Boost
 helix:1 2 3
+mainweapon:Feather Edge
+desiredweapon:Rectrix
 
 character:Vepley
 class:Vanguard
 attachment:Ballistic Boost
 helix:1 3 2/5/6
+mainweapon:Vepr-12
+desiredweapon:Heart Seeker

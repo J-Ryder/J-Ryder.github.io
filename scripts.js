@@ -1,7 +1,6 @@
 const characterURL = 'Descriptions/characterdata.txt';
 let characterData = [];
 
-
 function flipCard(card){
     card.classList.toggle('flipped');
     const keyword = card.id.replace('Card', '');
@@ -30,19 +29,26 @@ function parseCharacterData(text) {
     const data = [];
     const characters = text.trim().replace(/\r/g, '').split("\n\n");
 
+    const propertyMap = {
+        "character:": "name",
+        "class:": "class",
+        "attachment:": "attachment",
+        "helix:": "helix",
+        "mainweapon:": "mainweapon",
+        "desiredweapon": "desiredweapon"
+    };
+
     characters.forEach((characterBlock, index) => {
         const lines = characterBlock.trim().split("\n").filter(line => line.trim() !== "");  // Remove empty lines
         const characterObj = {};
 
         lines.forEach(line => {
-            if (line.startsWith("character:")) {
-                characterObj.name = line.replace("character:", "").trim();
-            }
-            else if (line.startsWith("class:")) {
-                characterObj.class = line.replace("class:", "").trim();
-            }
-            else if (line.startsWith("attachment:")) {
-                characterObj.attachment = line.replace("attachment:", "").trim();
+            for (const prefix in propertyMap) {
+                if (line.startsWith(prefix)) {
+                    const property = propertyMap[prefix];
+                    characterObj[property] = line.replace(prefix, "").trim();
+                    break;
+                }
             }
         });
 
@@ -65,11 +71,22 @@ async function initializeCharacters() {
         });
     }
 }
+
 function displayCharacter(characterName) {
     console.log('Displaying character:', characterName);
 
     const character = characterData.find(c => c.name === characterName);
     if (character) {
+
+        //Character Name
+        const characternameElement = document.querySelector(`#${characterName}Card .character-name`);
+        if (characternameElement) {
+            characternameElement.textContent = `${characterName}`;
+            characternameElement.alt = `${characterName} Image`;
+            //console.log(`Image source set to: Icons/${characterName}.png`);
+        } else {
+            console.error("Image element not found for:", characterName);
+        }
 
         //Profile Picture
         const profileimageElement = document.querySelector(`#${characterName}Card .profile-image`);
@@ -80,15 +97,27 @@ function displayCharacter(characterName) {
         } else {
             console.error("Image element not found for:", characterName);
         }
+
         //Class Picture
         const classimageElement = document.querySelector(`#${characterName}Card .class-image`);
-        if (profileimageElement) {
-            profileimageElement.src = `Icons/${characterName}.PNG`;
-            profileimageElement.alt = `${characterName} Image`;
+        if (classimageElement) {
+            classimageElement.src = `Icons/${character.class}.PNG`;
+            classimageElement.alt = `${character.class} Image`;
             //console.log(`Image source set to: Icons/${characterName}.png`);
         } else {
-            console.error("Image element not found for:", characterName);
+            console.error("Class image element not found for:", characterName);
         }
+
+        //Gun
+        const mainweaponElement = document.querySelector(`#${characterName}Card .gun-name`);
+        if (mainweaponElement) {
+            mainweaponElement.textContent = `${character.mainweapon}`;
+            mainweaponElement.alt = `${characterName} Image`;
+            //console.log(`Image source set to: Icons/${characterName}.png`);
+        } else {
+            console.error("Class image element not found for:", characterName);
+        }
+
     } else {
         console.error("Character not found:", characterName);
     }
@@ -97,7 +126,7 @@ function displayCharacter(characterName) {
 function displayAttachment(characterName) {
     const character = characterData.find(c => c.name === characterName);
     if (character) {
-        const outputElement = document.getElementById(`${characterName}Attachment`);
+        const outputElement = document.getElementById(`GunAttachment`);
         if (outputElement) {
             outputElement.textContent = character.attachment || "No attachment found";
         } else {
@@ -107,7 +136,6 @@ function displayAttachment(characterName) {
         console.error("Character not found:", characterName);
     }
 }
-
 
 document.addEventListener("DOMContentLoaded", async() => {
     await loadCharacterFile();
