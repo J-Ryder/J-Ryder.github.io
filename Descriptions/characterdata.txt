@@ -50,8 +50,8 @@ helix:1 2 5
 
 character:Papasha
 class:Sentinel
-attachment:
-helix:
+attachment:N/A
+helix:N/A
 
 character:Peritya
 class:Sentinel
