@@ -1,0 +1,94 @@
+character:Cheeta
+class:Support
+attachment:Phase Strike/Emergency Repair
+helix:1 2 3
+
+character:Colphne
+class:Support
+attachment:Emergency Repair
+helix:1 2 3
+
+character:Groza
+class:Bulwark
+attachment:Allay Support
+helix:1 4 6
+
+character:Krolik
+class:Vanguard
+attachment:Phase Strike
+helix:2 3 5
+
+character:Ksenia
+class:Support
+attachment:Emergency Repair
+helix:1 4 6
+
+character:Littara
+class:Sentinel
+attachment:Ballistic Boost
+helix:1 2 6
+
+character:Lotta
+class:Sentinel
+attachment:Ice Boost
+helix:1 3 5
+
+character:Mosin-Nagant
+class:Sentinel
+attachment:Ballistic Boost/Electric Boost (V4)
+helix:1 2 6
+
+character:Nagant
+class:Support
+attachment:Phase Strike
+helix:2 4 6
+
+character:Nemesis
+class:Sentinel
+attachment:Phase Strike
+helix:1 2 5
+
+character:Papasha
+class:Sentinel
+attachment:
+helix:
+
+character:Peritya
+class:Sentinel
+attachment:Phase Strike/Corrosion Boost
+helix:1 2 6
+
+character:Qiongjiu
+class:Sentinel
+attachment:Fire Boost
+helix:3 4 5/1
+
+character:Sabrina
+class:Bulwark
+attachment:Allay Support (Tank)/Ballistic Boost
+helix:1 2 4
+
+character:Sharkry
+class:Sentinel
+attachment:Phase Strike/Fire Boost
+helix:1 2 3
+
+character:Suomi
+class:Support
+attachment:Emergency Repair(V1)/Ultimate Pursuit/Ballistic Boost
+helix:1 2 6
+
+character:Tololo
+class:Sentinel
+attachment:Phase Strike(V1)/Riptide Boost (V2+)
+helix:1 2 3
+
+character:Ullrid
+class:Vanguard
+attachment:Ballistic Boost
+helix:1 2 3
+
+character:Vepley
+class:Vanguard
+attachment:Ballistic Boost
+helix:1 3 2/5/6

@@ -43,7 +43,7 @@
     position: absolute;
   }
   .card.flipped .inner {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   .front, .back {
     height: 100%;
