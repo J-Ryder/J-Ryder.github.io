@@ -71,6 +71,7 @@
     justify-content: top;
     align-items: center;
     gap: 1rem;
+    word-wrap: break-word;
   }
 
   /* Card Picture ========================================================================== */

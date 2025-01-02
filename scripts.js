@@ -10,7 +10,6 @@ function flipCard(card){
 
 async function loadCharacterFile() {
     try {
-
         const characterResponse = await fetch(characterURL);
 
         if (!characterResponse.ok) {
@@ -55,7 +54,45 @@ function parseCharacterData(text) {
     return data;
 }
 
+async function initializeCharacters() {
+    console.log("Initializing characters...");
+    if (characterData.length === 0) {
+        await loadCharacterFile();
+    }
+    else {
+        characterData.forEach(character => {
+            displayCharacter(character.name);
+        });
+    }
+}
+function displayCharacter(characterName) {
+    console.log('Displaying character:', characterName);
 
+    const character = characterData.find(c => c.name === characterName);
+    if (character) {
+
+        //Profile Picture
+        const profileimageElement = document.querySelector(`#${characterName}Card .profile-image`);
+        if (profileimageElement) {
+            profileimageElement.src = `Icons/${characterName}.PNG`;
+            profileimageElement.alt = `${characterName} Image`;
+            //console.log(`Image source set to: Icons/${characterName}.png`);
+        } else {
+            console.error("Image element not found for:", characterName);
+        }
+        //Class Picture
+        const classimageElement = document.querySelector(`#${characterName}Card .class-image`);
+        if (profileimageElement) {
+            profileimageElement.src = `Icons/${characterName}.PNG`;
+            profileimageElement.alt = `${characterName} Image`;
+            //console.log(`Image source set to: Icons/${characterName}.png`);
+        } else {
+            console.error("Image element not found for:", characterName);
+        }
+    } else {
+        console.error("Character not found:", characterName);
+    }
+}
 
 function displayAttachment(characterName) {
     const character = characterData.find(c => c.name === characterName);
@@ -71,4 +108,8 @@ function displayAttachment(characterName) {
     }
 }
 
-loadCharacterFile();
+
+document.addEventListener("DOMContentLoaded", async() => {
+    await loadCharacterFile();
+    initializeCharacters();
+});
