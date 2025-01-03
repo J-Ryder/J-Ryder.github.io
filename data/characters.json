@@ -2,153 +2,154 @@
     {
       "character": "Cheeta",
       "class": "Support",
-      "helix": [1, 2, 3],
       "mainweapon": "Heckler & Koch MP7",
       "desiredweapon": "Echoes of Sorrow",
-      "attachment": "Phase Strike/Emergency Repair"
+      "attachments": ["Phase Strike", "Emergency Repair"],
+      "helix": [1, 2, 3]
     },
     {
       "character": "Colphne",
       "class": "Support",
-      "helix": [1, 2, 3],
       "mainweapon": "Taurus Curve",
       "desiredweapon": "Noisy Phantom",
-      "attachment": "Emergency Repair"
+      "attachments": ["Emergency Repair"],
+      "helix": [1, 2, 3]
     },
     {
       "character": "Groza",
       "class": "Bulwark",
-      "helix": [1, 4, 6],
       "mainweapon": "OTs-14 Groza",
       "desiredweapon": "Guerno",
-      "attachment": "Allay Support"
+      "attachments": ["Allay Support"],
+      "helix": [1, 4, 6]
     },
     {
       "character": "Krolik",
       "class": "Vanguard",
-      "helix": [2, 3, 5],
       "mainweapon": "Wild Rabbit",
       "desiredweapon": "Crowned Jackelope",
-      "attachment": "Phase Strike"
+      "attachments": ["Phase Strike"],
+      "helix": [2, 3, 5]
     },
     {
       "character": "Ksenia",
       "class": "Support",
-      "helix": [1, 4, 6],
       "mainweapon": "Stechkin",
       "desiredweapon": "Noisy Phantom",
-      "attachment": "Emergency Repair"
+      "attachments": ["Emergency Repair"],
+      "helix": [1, 4, 6]
     },
     {
       "character": "Littara",
       "class": "Sentinel",
-      "helix": [1, 2, 6],
       "mainweapon": "Galil ARM",
       "desiredweapon": "Optical Illusion",
-      "attachment": "Ballistic Boost"
+      "attachments": ["Ballistic Boost"],
+      "helix": [1, 2, 6]
     },
     {
       "character": "Lotta",
       "class": "Sentinel",
-      "helix": [1, 3, 5],
       "mainweapon": "Benelli Super 90",
       "desiredweapon": "Heart Seeker",
-      "attachment": "Ice Boost"
+      "attachments": ["Ice Boost"],
+      "helix": [1, 3, 5]
     },
     {
       "character": "Mosin-Nagant",
       "class": "Sentinel",
-      "helix": [1, 2, 6],
       "mainweapon": "M1891 Mosin-Nagant",
       "desiredweapon": "Samosek",
-      "attachment": "Ballistic Boost/Electric Boost (V4)"
+      "attachments": ["Ballistic Boost", "Electric Boost (V4)"],
+      "helix": [1, 2, 6]
     },
     {
       "character": "Nagant",
       "class": "Support",
-      "helix": [2, 4, 6],
       "mainweapon": "Nagant M1895",
       "desiredweapon": "Hestia",
-      "attachment": "Phase Strike"
+      "attachments": ["Phase Strike"],
+      "helix": [2, 4, 6]
     },
     {
       "character": "Nemesis",
       "class": "Sentinel",
-      "helix": [1, 2, 5],
       "mainweapon": "OM 50 Nemesis",
       "desiredweapon": "Arcana",
-      "attachment": "Phase Strike"
+      "attachments": ["Phase Strike"],
+      "helix": [1, 2, 5]
     },
     {
       "character": "Papasha",
       "class": "Sentinel",
-      "helix": null,
       "mainweapon": "PPsh-41",
       "desiredweapon": "Svarog",
-      "attachment": null
+      "attachments": null,
+      "helix": null
     },
     {
       "character": "Peritya",
       "class": "Sentinel",
-      "helix": [1, 2, 6],
       "mainweapon": "PKP Pecheneg",
       "desiredweapon": "Optical Illusion",
-      "attachment": "Phase Strike/Corrosion Boost"
+      "attachments": ["Phase Strike", "Corrosion Boost"],
+      "helix": [1, 2, 6]
     },
     {
       "character": "Qiongjiu",
       "class": "Sentinel",
-      "helix": [3, 4, 5, 1],
       "mainweapon": "QBZ-191",
       "desiredweapon": "Golden Melody",
-      "attachment": "Fire Boost"
+      "attachments": ["Fire Boost"],
+      "helix": [3, 4, 5, 1]
     },
     {
       "character": "Sabrina",
       "class": "Bulwark",
-      "helix": [1, 2, 4],
       "mainweapon": "Franchi SPAS-12",
       "desiredweapon": "Mezzaluna",
-      "attachment": "Allay Support/Ballistic Boost"
+      "attachments": ["Allay Support", "Ballistic Boost"],
+      "helix": [1, 2, 4]
     },
     {
       "character": "Sharkry",
       "class": "Sentinel",
-      "helix": [1, 2, 3],
       "mainweapon": "Robinson Armament XCR",
       "desiredweapon": "Planeta",
-      "attachment": "Phase Strike/Fire Boost"
+      "attachments": ["Phase Strike", "Fire Boost"],
+      "helix": [1, 2, 3]
     },
     {
       "character": "Suomi",
       "class": "Support",
-      "helix": [1, 2, 6],
       "mainweapon": "Suomi",
       "desiredweapon": "Unspoken Calling",
-      "attachment": "Emergency Repair(V1)/Ultimate Pursuit/Ballistic Boost"
+      "attachments": ["Emergency Repair(V1)", "Ultimate Pursuit", "Ballistic Boost"],
+      "helix": [1, 2, 6]
     },
     {
       "character": "Tololo",
       "class": "Sentinel",
-      "helix": [1, 2, 3],
       "mainweapon": "AK-Alfa",
       "desiredweapon": "Planeta",
-      "attachment": "Phase Strike(V1)/Riptide Boost (V2+)"
+      "attachments": ["Phase Strike(V1)", "Riptide Boost (V2+)"],
+      "helix": [1, 2, 3]
     },
     {
       "character": "Ullrid",
       "class": "Vanguard",
-      "helix": [1, 2, 3],
       "mainweapon": "Feather Edge",
       "desiredweapon": "Rectrix",
-      "attachment": "Ballistic Boost"
+      "attachments": ["Ballistic Boost"],
+      "helix": [1, 2, 3]
     },
     {
       "character": "Vepley",
       "class": "Vanguard",
-      "helix": [1, 3, 2, 5, 6],
       "mainweapon": "Vepr-12",
       "desiredweapon": "Heart Seeker",
-      "attachment": "Ballistic Boost"
+      "attachments": ["Ballistic Boost"],
+      "helix": [1, 3, 2, 5, 6]
     }
-]  
+  ]
+  
