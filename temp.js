@@ -1,80 +1,62 @@
-const attachmenturl = 'Descriptions/attachment.txt';
+const character = characterData.find(c => c.name === characterName);
+if (character) {
 
-function flipCard(card) {
-    card.classList.toggle('flipped');
-    const keyword = card.id.replace('Card', '');  // This will be 'Cheeta', 'Groza', etc.
-    displayattachment(keyword);
+    //Character Name
+    const characternameElement = document.querySelector(`#${characterName}Card .character-name`);
+    if (characternameElement) {
+        characternameElement.textContent = `${characterName}`;
+        characternameElement.alt = `${characterName} Image`;
+        //console.log(`Image source set to: Icons/${characterName}.png`);
+    } else {
+        console.error("Image element not found for:", characterName);
+    }
+
+    //Profile Picture
+    const profileimageElement = document.querySelector(`#${characterName}Card .profile-image`);
+    if (profileimageElement) {
+        profileimageElement.src = `Icons/${characterName}.PNG`;
+        profileimageElement.alt = `${characterName} Image`;
+        //console.log(`Image source set to: Icons/${characterName}.png`);
+    } else {
+        console.error("Image element not found for:", characterName);
+    }
+
+    //Class Picture
+    const classimageElement = document.querySelector(`#${characterName}Card .class-image`);
+    if (classimageElement) {
+        classimageElement.src = `Icons/${character.class}.PNG`;
+        classimageElement.alt = `${character.class} Image`;
+        //console.log(`Image source set to: Icons/${characterName}.png`);
+    } else {
+        console.error("Class image element not found for:", characterName);
+    }
+
+    //Gun
+    const mainweaponElement = document.querySelector(`#${characterName}Card .gun-name`);
+    if (mainweaponElement) {
+        mainweaponElement.textContent = `${character.mainweapon}`;
+        mainweaponElement.alt = `${characterName} Image`;
+        //console.log(`Image source set to: Icons/${characterName}.png`);
+    } else {
+        console.error("Class image element not found for:", characterName);
+    }
+
+} else {
+    console.error("Character not found:", characterName);
 }
 
-async function displayattachment(keyword) {
-    try {
-        const attachmentresponse = await fetch(attachmenturl);
-        if (!attachmentresponse.ok) {
-            throw new Error('HTTP error');
-        }
 
-        const attachmenttext = await attachmentresponse.text();
-        const lines = attachmenttext.split("\n");
-        let result = "";
-        let characterFound = false;
-        let characterClass = '';
-        let profileImage = '';
-        let classImage = '';
 
-        for (let i = 0; i < lines.length; i++) {
-            if (lines[i].trim().startsWith('character:' + keyword)) {
-                // Once we find the character line, we search for the attachment and other details
-                characterFound = true;
-                
-                // Extract class, profile image, and class image
-                for (let j = i + 1; j < lines.length; j++) {
-                    if (lines[j].trim().startsWith('class:')) {
-                        characterClass = lines[j].trim().replace('class:', '').trim();
-                        break;
-                    }
-                }
-
-                // Define profile image and class image paths based on character
-                profileImage = `Icons/${keyword}.png`; // Assuming each character's profile image is named after the character (e.g., Cheeta.png)
-                classImage = `Icons/${characterClass}.png`; // Assuming class images are named after the class (e.g., Support.png)
-
-                // Now extract the attachment
-                for (let j = i + 1; j < lines.length; j++) {
-                    if (lines[j].trim().startsWith('attachment:')) {
-                        result = lines[j].trim().replace('attachment:', '').trim();
-                        break;
-                    }
-                }
-
-                break;
-            }
-        }
-
-        // If the character is found, update the profile and class images, and display the attachment
-        if (characterFound) {
-            const outputElement = document.getElementById(keyword + 'Output');
-            outputElement.textContent = result || "No attachment found";
-
-            // Update profile image and class image based on character and class
-            const profileImgElement = document.querySelector(`#${keyword}Card .profile-image`);
-            const classImgElement = document.querySelector(`#${keyword}Card .class-image`);
-            profileImgElement.src = profileImage;
-            classImgElement.src = classImage;
+function displayAttachment(characterName) {
+    const character = characterData.find(c => c.name === characterName);
+    if (character) {
+        const outputElement = document.getElementById(`GunAttachment`);
+        if (outputElement) {
+            outputElement.textContent = character.attachment || "No attachment found";
         } else {
-            // If the character is not found, display an error
-            const outputElement = document.getElementById(keyword + 'Output');
-            outputElement.textContent = "Character not found";
+            console.error("Output element not found for:", characterName);
         }
-
-    } catch (error) {
-        const outputElement = document.getElementById(keyword + 'Output');
-        outputElement.textContent = `Error: ${error.message}`;
+    } else {
+        console.error("Character not found:", characterName);
     }
 }
-
-
-let characterData = [
-    { name: "Cheeta", class: "Support", attachment: "Phase Strike" },
-    { name: "Groza", class: "Bulwark", attachment: "Allay Support" },
-    // more characters
-  ];

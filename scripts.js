@@ -1,12 +1,6 @@
 const characterURL = 'Descriptions/characterdata.txt';
 let characterData = [];
 
-function flipCard(card){
-    card.classList.toggle('flipped');
-    const keyword = card.id.replace('Card', '');
-    displayAttachment(keyword);
-}
-
 async function loadCharacterFile() {
     try {
         const characterResponse = await fetch(characterURL);
@@ -74,67 +68,44 @@ async function initializeCharacters() {
 
 function displayCharacter(characterName) {
     console.log('Displaying character:', characterName);
-
     const character = characterData.find(c => c.name === characterName);
-    if (character) {
-
-        //Character Name
-        const characternameElement = document.querySelector(`#${characterName}Card .character-name`);
-        if (characternameElement) {
-            characternameElement.textContent = `${characterName}`;
-            characternameElement.alt = `${characterName} Image`;
-            //console.log(`Image source set to: Icons/${characterName}.png`);
-        } else {
-            console.error("Image element not found for:", characterName);
-        }
-
-        //Profile Picture
-        const profileimageElement = document.querySelector(`#${characterName}Card .profile-image`);
-        if (profileimageElement) {
-            profileimageElement.src = `Icons/${characterName}.PNG`;
-            profileimageElement.alt = `${characterName} Image`;
-            //console.log(`Image source set to: Icons/${characterName}.png`);
-        } else {
-            console.error("Image element not found for:", characterName);
-        }
-
-        //Class Picture
-        const classimageElement = document.querySelector(`#${characterName}Card .class-image`);
-        if (classimageElement) {
-            classimageElement.src = `Icons/${character.class}.PNG`;
-            classimageElement.alt = `${character.class} Image`;
-            //console.log(`Image source set to: Icons/${characterName}.png`);
-        } else {
-            console.error("Class image element not found for:", characterName);
-        }
-
-        //Gun
-        const mainweaponElement = document.querySelector(`#${characterName}Card .gun-name`);
-        if (mainweaponElement) {
-            mainweaponElement.textContent = `${character.mainweapon}`;
-            mainweaponElement.alt = `${characterName} Image`;
-            //console.log(`Image source set to: Icons/${characterName}.png`);
-        } else {
-            console.error("Class image element not found for:", characterName);
-        }
-
-    } else {
+    if (!character) {
         console.error("Character not found:", characterName);
+        return;
+    }
+    // Set the character's name
+    setElementContent(`#${characterName}Card .character-name`, 'textContent', characterName, `${characterName} Name`);
+
+    // Set profile image
+    setElementContent(`#${characterName}Card .profile-image`, 'src', `Icons/${characterName}.PNG`, `${characterName} Profile`);
+
+    // Set class image
+    setElementContent(`#${characterName}Card .class-image`, 'src', `Icons/${character.class}.PNG`, `${character.class} Class`);
+
+    // Set main weapon
+    setElementContent(`#${characterName}Card .gun-name`, 'textContent', character.mainweapon, `${characterName} Gun`);
+
+    // Set weapon attachment
+    setElementContent(`#${characterName}Card .gunattachment-name`, 'textContent', character.attachment, `${characterName} Attachment`);
+}
+
+//function setElementContent(NameCard, class name, type(src, text), alt text)
+function setElementContent(selector, property, content, altText='') {
+    const element = document.querySelector(selector);
+    if (element) {
+        element[property] = content;
+        if (altText) {
+            element.altText = altText;
+        }
+    }
+    else {
+        console.error(`${property} element not found for:`, characterName);
     }
 }
 
-function displayAttachment(characterName) {
-    const character = characterData.find(c => c.name === characterName);
-    if (character) {
-        const outputElement = document.getElementById(`GunAttachment`);
-        if (outputElement) {
-            outputElement.textContent = character.attachment || "No attachment found";
-        } else {
-            console.error("Output element not found for:", characterName);
-        }
-    } else {
-        console.error("Character not found:", characterName);
-    }
+function flipCard(card){
+    card.classList.toggle('flipped');
+    const keyword = card.id.replace('Card', '');
 }
 
 document.addEventListener("DOMContentLoaded", async() => {
