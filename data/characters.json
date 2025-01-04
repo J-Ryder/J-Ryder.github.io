@@ -1,155 +1,517 @@
 [
     {
-      "character": "Cheeta",
-      "class": "Support",
-      "mainweapon": "Heckler & Koch MP7",
-      "desiredweapon": "Echoes of Sorrow",
-      "attachments": ["Phase Strike", "Emergency Repair"],
-      "helix": [1, 2, 3]
+        "character_id": 11,
+        "character": "Cheeta",
+        "class": "Support",
+        "mainweapon": "Heckler & Koch MP7",
+        "desiredweapon": "Echoes of Sorrow",
+        "attachments": ["Phase Strike", "Emergency Repair"],
+        "helix": [1, 2, 3],
+        "stats": {
+            "heath": 1981,
+            "attack": 539,
+            "defence": 553,
+            "stability_gauge": 12,
+            "movement_speed": 6,
+            "attribute": "Light Type Bullet",
+            "attribute_effect": "Burn",
+            "weakness": "Medium Type Bullet",
+            "weakness_effect": "Turbid"
+        },
+        "skills": [
+            {
+            "skill_1": "Welcome Gift",
+            "skill_2": "Spicy Candy",
+            "skill_3": "Fireworks Festival",
+            "skill_4": "Surprise Box",
+            "passive": "Invention of the Century"
+            }
+        ]
     },
     {
-      "character": "Colphne",
-      "class": "Support",
-      "mainweapon": "Taurus Curve",
-      "desiredweapon": "Noisy Phantom",
-      "attachments": ["Emergency Repair"],
-      "helix": [1, 2, 3]
+        "character_id": 4,
+        "character": "Colphne",
+        "class": "Support",
+        "mainweapon": "Taurus Curve",
+        "desiredweapon": "Noisy Phantom",
+        "attachments": ["Emergency Repair"],
+        "helix": [1, 2, 3],
+        "stats": {
+            "heath": 1787,
+            "attack": 515,
+            "defence": 503,
+            "stability_gauge": 10,
+            "movement_speed": 7,
+            "attribute": "Light Type Bullet",
+            "attribute_effect": "Turbid",
+            "weakness": "Shotgun",
+            "weakness_effect": "Corrosion"
+        },
+        "skills": {
+            "skill_1": "Quick Reaction",
+            "skill_2": "Crisis Aid",
+            "skill_3": "Faint Glow of the Battlefield",
+            "skill_4": "Emergency Treatment",
+            "passive": "Medical Contingency"
+        }
     },
     {
-      "character": "Groza",
-      "class": "Bulwark",
-      "mainweapon": "OTs-14 Groza",
-      "desiredweapon": "Guerno",
-      "attachments": ["Allay Support"],
-      "helix": [1, 4, 6]
+        "character_id": 1,
+        "character": "Groza",
+        "class": "Bulwark",
+        "mainweapon": "OTs-14 Groza",
+        "desiredweapon": "Guerno",
+        "attachments": ["Allay Support"],
+        "helix": [1, 4, 6],
+        "stats": {
+            "heath": 1981,
+            "attack": 539,
+            "defence": 553,
+            "stability_gauge": 12,
+            "movement_speed": 6,
+            "attribute": "Medium Type Bullet",
+            "attribute_effect": null,
+            "weakness": "Heavy Type Bullet",
+            "weakness_effect": "Burn"
+        },
+        "skills": {
+            "skill_1": "Fire Command",
+            "skill_2": "Heavy Suppression",
+            "skill_3": "Perfect Cover",
+            "skill_4": "Explosive Bombardment",
+            "passive": "Timely Maintenance"
+        }
     },
     {
-      "character": "Krolik",
-      "class": "Vanguard",
-      "mainweapon": "Wild Rabbit",
-      "desiredweapon": "Crowned Jackelope",
-      "attachments": ["Phase Strike"],
-      "helix": [2, 3, 5]
+        "character_id": 3,
+        "character": "Krolik",
+        "class": "Vanguard",
+        "mainweapon": "Wild Rabbit",
+        "desiredweapon": "Crowned Jackelope",
+        "attachments": ["Phase Strike"],
+        "helix": [2, 3, 5],
+        "stats": {
+            "heath": 1397,
+            "attack": 618,
+            "defence": 463,
+            "stability_gauge": 8,
+            "movement_speed": 9,
+            "attribute": "Melee",
+            "attribute_effect": "Burn",
+            "weakness": "Shotgun",
+            "weakness_effect": "Corrosion"
+        },
+        "skills": {
+            "skill_1": "Instantaneous Slash",
+            "skill_2": "Crushing Revolution",
+            "skill_3": "Quenching Slash",
+            "skill_4": "Slaughter Sequence",
+            "passive": "Embers"
+        }
     },
     {
-      "character": "Ksenia",
-      "class": "Support",
-      "mainweapon": "Stechkin",
-      "desiredweapon": "Noisy Phantom",
-      "attachments": ["Emergency Repair"],
-      "helix": [1, 4, 6]
+        "character_id": 9,
+        "character": "Ksenia",
+        "class": "Support",
+        "mainweapon": "Stechkin",
+        "desiredweapon": "Noisy Phantom",
+        "attachments": ["Emergency Repair"],
+        "helix": [1, 4, 6],
+        "stats": {
+            "heath": 1842,
+            "attack": 539,
+            "defence": 463,
+            "stability_gauge": 10,
+            "movement_speed": 6,
+            "attribute": "Light Type Bullet",
+            "attribute_effect": "Burn",
+            "weakness": "Shotgun",
+            "weakness_effect": "Burn"
+        },
+        "skills": {
+            "skill_1": "Special Discount",
+            "skill_2": "Favorable Cycle",
+            "skill_3": "Comphrehensive Rescue",
+            "skill_4": "The Secret of Making Money",
+            "passive": "Passion for Shopping"
+        }
     },
     {
-      "character": "Littara",
-      "class": "Sentinel",
-      "mainweapon": "Galil ARM",
-      "desiredweapon": "Optical Illusion",
-      "attachments": ["Ballistic Boost"],
-      "helix": [1, 2, 6]
+        "character_id": 10,
+        "character": "Littara",
+        "class": "Sentinel",
+        "mainweapon": "Galil ARM",
+        "desiredweapon": "Optical Illusion",
+        "attachments": ["Ballistic Boost"],
+        "helix": [1, 2, 6],
+        "stats": {
+            "heath": 1656,
+            "attack": 670,
+            "defence": 487,
+            "stability_gauge": 9,
+            "movement_speed": 5,
+            "attribute": "Heavy Type Bullet",
+            "attribute_effect": null,
+            "weakness": "Light Type Bullet",
+            "weakness_effect": "Burn"
+        },
+        "skills": {
+            "skill_1": "Quick Writing",
+            "skill_2": "Perfect Opportunity",
+            "skill_3": "Reliable Cover Fire",
+            "skill_4": "Strategist's Plan",
+            "passive": "Systematic Breakdown"
+        }
     },
     {
-      "character": "Lotta",
-      "class": "Sentinel",
-      "mainweapon": "Benelli Super 90",
-      "desiredweapon": "Heart Seeker",
-      "attachments": ["Ice Boost"],
-      "helix": [1, 3, 5]
+        "character_id": 22,
+        "character": "Lotta",
+        "class": "Sentinel",
+        "mainweapon": "Benelli Super 90",
+        "desiredweapon": "Heart Seeker",
+        "attachments": ["Ice Boost"],
+        "helix": [1, 3, 5],
+        "stats": {
+            "heath": 1599,
+            "attack": 696,
+            "defence": 487,
+            "stability_gauge": 9,
+            "movement_speed": 5,
+            "attribute": "Shotgun",
+            "attribute_effect": "Ice",
+            "weakness": "Medium Type Bullet",
+            "weakness_effect": "Burn"
+        },
+        "skills": {
+            "skill_1": "Heartfelt Confession",
+            "skill_2": "Cryo Rounds",
+            "skill_3": "Mental Adjustment",
+            "skill_4": "Amplified Courage",
+            "passive": "Bounds of Friendship"
+        }
     },
     {
-      "character": "Mosin-Nagant",
-      "class": "Sentinel",
-      "mainweapon": "M1891 Mosin-Nagant",
-      "desiredweapon": "Samosek",
-      "attachments": ["Ballistic Boost", "Electric Boost (V4)"],
-      "helix": [1, 2, 6]
+        "character_id": 15,
+        "character": "Mosin-Nagant",
+        "class": "Sentinel",
+        "mainweapon": "M1891 Mosin-Nagant",
+        "desiredweapon": "Samosek",
+        "attachments": ["Ballistic Boost", "Electric Boost (V4)"],
+        "helix": [1, 2, 6],
+        "stats": {
+            "heath": 1859,
+            "attack": 820,
+            "defence": 528,
+            "stability_gauge": 9,
+            "movement_speed": 4,
+            "attribute": "Heavy Type Bullet",
+            "attribute_effect": "Electric",
+            "weakness": "Light Type Bullet",
+            "weakness_effect": "Corrosion"
+        },
+        "skills": {
+            "skill_1": "Patrol Time",
+            "skill_2": "Target Victory",
+            "skill_3": "Positive Mindset",
+            "skill_4": "Declaration of Victory",
+            "passive": "Helping Others"
+        }
     },
     {
-      "character": "Nagant",
-      "class": "Support",
-      "mainweapon": "Nagant M1895",
-      "desiredweapon": "Hestia",
-      "attachments": ["Phase Strike"],
-      "helix": [2, 4, 6]
+        "character_id": 8,
+        "character": "Nagant",
+        "class": "Support",
+        "mainweapon": "Nagant M1895",
+        "desiredweapon": "Hestia",
+        "attachments": ["Phase Strike"],
+        "helix": [2, 4, 6],
+        "stats": {
+            "heath": 1656,
+            "attack": 609,
+            "defence": 512,
+            "stability_gauge": 10,
+            "movement_speed": 6,
+            "attribute": "Light Type Bullet",
+            "attribute_effect": "Corrosion",
+            "weakness": "Shotgun",
+            "weakness_effect": "Burn"
+        },
+        "skills": {
+            "skill_1": "Rapid Fire",
+            "skill_2": "The Senior's Admonishment",
+            "skill_3": "Partner of Justice",
+            "skill_4": "Sanction Declaration",
+            "passive": "The Veteran's Skills"
+        }
     },
     {
-      "character": "Nemesis",
-      "class": "Sentinel",
-      "mainweapon": "OM 50 Nemesis",
-      "desiredweapon": "Arcana",
-      "attachments": ["Phase Strike"],
-      "helix": [1, 2, 5]
+        "character_id": 2,
+        "character": "Nemesis",
+        "class": "Sentinel",
+        "mainweapon": "OM 50 Nemesis",
+        "desiredweapon": "Arcana",
+        "attachments": ["Phase Strike"],
+        "helix": [1, 2, 5],
+        "stats": {
+            "heath": 1656,
+            "attack": 703,
+            "defence": 463,
+            "stability_gauge": 9,
+            "movement_speed": 4,
+            "attribute": "Heavy Type Bullet",
+            "attribute_effect": "Corrosion",
+            "weakness": "Light Type Bullet",
+            "weakness_effect": "Turbid"
+        },
+        "skills": {
+            "skill_1": "Victory Portent",
+            "skill_2": "Enlightened Star",
+            "skill_3": "Penetrating Casket",
+            "skill_4": "Constellation Pursuit",
+            "passive": "Remote Observation"
+        }
     },
     {
-      "character": "Papasha",
-      "class": "Sentinel",
-      "mainweapon": "PPsh-41",
-      "desiredweapon": "Svarog",
-      "attachments": null,
-      "helix": null
+        "character_id": 26,
+        "character": "Papasha",
+        "class": "Sentinel",
+        "mainweapon": "PPsh-41",
+        "desiredweapon": "Svarog",
+        "attachments": null,
+        "helix": null,
+        "stats": {
+            "heath": 1893,
+            "attack": 802,
+            "defence": 528,
+            "stability_gauge": 9,
+            "movement_speed": 5,
+            "attribute": "Light Type Bullet",
+            "attribute_effect": null,
+            "weakness": "Shotgun",
+            "weakness_effect": "Corrosion"
+        },
+        "skills": {
+            "skill_1": "Warning Shot",
+            "skill_2": "Honor Guard",
+            "skill_3": "Silent Breakthrough",
+            "skill_4": "Heart of Protection",
+            "passive": "United Guards"
+        }
     },
     {
-      "character": "Peritya",
-      "class": "Sentinel",
-      "mainweapon": "PKP Pecheneg",
-      "desiredweapon": "Optical Illusion",
-      "attachments": ["Phase Strike", "Corrosion Boost"],
-      "helix": [1, 2, 6]
+        "character_id": 12,
+        "character": "Peritya",
+        "class": "Sentinel",
+        "mainweapon": "PKP Pecheneg",
+        "desiredweapon": "Optical Illusion",
+        "attachments": ["Phase Strike", "Corrosion Boost"],
+        "helix": [1, 2, 6],
+        "stats": {
+            "heath": 1948,
+            "attack": 765,
+            "defence": 536,
+            "stability_gauge": 9,
+            "movement_speed": 5,
+            "attribute": "Heavy Type Bullet",
+            "attribute_effect": "Corrosion",
+            "weakness": "Light Type Bullet",
+            "weakness_effect": "Turbid"
+        },
+        "skills": {
+            "skill_1": "Rapid Override",
+            "skill_2": "Fixed Erosion",
+            "skill_3": "Domain Suppression",
+            "skill_4": "Multiple Compilation",
+            "passive": "Chain Reaction"
+        }
     },
     {
-      "character": "Qiongjiu",
-      "class": "Sentinel",
-      "mainweapon": "QBZ-191",
-      "desiredweapon": "Golden Melody",
-      "attachments": ["Fire Boost"],
-      "helix": [3, 4, 5, 1]
+        "character_id": 14,
+        "character": "Qiongjiu",
+        "class": "Sentinel",
+        "mainweapon": "QBZ-191",
+        "desiredweapon": "Golden Melody",
+        "attachments": ["Fire Boost"],
+        "helix": [3, 4, 5, 1],
+        "stats": {
+            "heath": 1893,
+            "attack": 802,
+            "defence": 528,
+            "stability_gauge": 9,
+            "movement_speed": 5,
+            "attribute": "Medium Type Bullet",
+            "attribute_effect": "Burn",
+            "weakness": "Heavy Type Bullet",
+            "weakness_effect": "Ice"
+        },
+        "skills": {
+            "skill_1": "Fuse",
+            "skill_2": "Common Rail",
+            "skill_3": "Guide to Victory",
+            "skill_4": "Pressing the Momentum",
+            "passive": "Steady Plan"
+        }
     },
     {
-      "character": "Sabrina",
-      "class": "Bulwark",
-      "mainweapon": "Franchi SPAS-12",
-      "desiredweapon": "Mezzaluna",
-      "attachments": ["Allay Support", "Ballistic Boost"],
-      "helix": [1, 2, 4]
+        "character_id": 13,
+        "character": "Sabrina",
+        "class": "Bulwark",
+        "mainweapon": "Franchi SPAS-12",
+        "desiredweapon": "Mezzaluna",
+        "attachments": ["Allay Support", "Ballistic Boost"],
+        "helix": [1, 2, 4],
+        "stats": {
+            "heath": 2249,
+            "attack": 609,
+            "defence": 642,
+            "stability_gauge": 12,
+            "movement_speed": 6,
+            "attribute": "Shotgun",
+            "attribute_effect": "Turbid",
+            "weakness": "Heavy Type Bullet",
+            "weakness_effect": "Electric"
+        },
+        "skills": {
+            "skill_1": "My Treat",
+            "skill_2": "Delicious Feast",
+            "skill_3": "Meal Preparation",
+            "skill_4": "Gourmet Spirit",
+            "passive": "Flexible Modification"
+        }
     },
     {
-      "character": "Sharkry",
-      "class": "Sentinel",
-      "mainweapon": "Robinson Armament XCR",
-      "desiredweapon": "Planeta",
-      "attachments": ["Phase Strike", "Fire Boost"],
-      "helix": [1, 2, 3]
+        "character_id": 5,
+        "character": "Sharkry",
+        "class": "Sentinel",
+        "mainweapon": "Robinson Armament XCR",
+        "desiredweapon": "Planeta",
+        "attachments": ["Phase Strike", "Fire Boost"],
+        "helix": [1, 2, 3],
+        "stats": {
+            "heath": 1706,
+            "attack": 679,
+            "defence": 463,
+            "stability_gauge": 9,
+            "movement_speed": 5,
+            "attribute": "Medium Type Bullet",
+            "attribute_effect": "Burn",
+            "weakness": "Medium Type Bullet",
+            "weakness_effect": "Corrosion"
+        },
+        "skills": {
+            "skill_1": "Love Shot",
+            "skill_2": "Boiling Soundwaves",
+            "skill_3": "Perfect Rising Tone",
+            "skill_4": "Highlight Moment",
+            "passive": "Makeup Organisation"
+        }
     },
     {
-      "character": "Suomi",
-      "class": "Support",
-      "mainweapon": "Suomi",
-      "desiredweapon": "Unspoken Calling",
-      "attachments": ["Emergency Repair(V1)", "Ultimate Pursuit", "Ballistic Boost"],
-      "helix": [1, 2, 6]
+        "character_id": 23,
+        "character": "Suomi",
+        "class": "Support",
+        "mainweapon": "Suomi",
+        "desiredweapon": "Unspoken Calling",
+        "attachments": ["Emergency Repair(V1)", "Ultimate Pursuit", "Ballistic Boost"],
+        "helix": [1, 2, 6],
+        "stats": {
+            "heath": 1955,
+            "attack": 672,
+            "defence": 617,
+            "stability_gauge": 10,
+            "movement_speed": 6,
+            "attribute": "Light Type Bullet",
+            "attribute_effect": "Ice",
+            "weakness": "Heavy Type Bullet",
+            "weakness_effect": "Corrosion"
+        },
+        "skills": {
+            "skill_1": "Ice Missile",
+            "skill_2": "Winter's Wrath",
+            "skill_3": "Grace of the Snow",
+            "skill_4": "Radiance of the Snowfield",
+            "passive": "Source of Warmth"
+        }
     },
     {
-      "character": "Tololo",
-      "class": "Sentinel",
-      "mainweapon": "AK-Alfa",
-      "desiredweapon": "Planeta",
-      "attachments": ["Phase Strike(V1)", "Riptide Boost (V2+)"],
-      "helix": [1, 2, 3]
+        "character_id": 6,
+        "character": "Tololo",
+        "class": "Sentinel",
+        "mainweapon": "AK-Alfa",
+        "desiredweapon": "Planeta",
+        "attachments": ["Phase Strike(V1)", "Riptide Boost (V2+)"],
+        "helix": [1, 2, 3],
+        "stats": {
+            "heath": 1819,
+            "attack": 836,
+            "defence": 528,
+            "stability_gauge": 9,
+            "movement_speed": 5,
+            "attribute": "Medium Type Bullet",
+            "attribute_effect": "Turbid",
+            "weakness": "Heavy Type Bullet",
+            "weakness_effect": "Electric"
+        },
+        "skills": {
+            "skill_1": "Meteor",
+            "skill_2": "Black Hole Inversion",
+            "skill_3": "Supernova Impact",
+            "skill_4": "Annihilation Star",
+            "passive": "Aurora Curtain"
+        }
     },
     {
-      "character": "Ullrid",
-      "class": "Vanguard",
-      "mainweapon": "Feather Edge",
-      "desiredweapon": "Rectrix",
-      "attachments": ["Ballistic Boost"],
-      "helix": [1, 2, 3]
+        "character_id": 21,
+        "character": "Ullrid",
+        "class": "Vanguard",
+        "mainweapon": "Feather Edge",
+        "desiredweapon": "Rectrix",
+        "attachments": ["Ballistic Boost"],
+        "helix": [1, 2, 3],
+        "stats": {
+            "heath": 1519,
+            "attack": 740,
+            "defence": 528,
+            "stability_gauge": 8,
+            "movement_speed": 9,
+            "attribute": "Melee",
+            "attribute_effect": "Light Type Bullet",
+            "weakness": "Heavy Type Bullet",
+            "weakness_effect": "Ice"
+        },
+        "skills": {
+            "skill_1": "Warning Shot",
+            "skill_2": "Hunter's Sight",
+            "skill_3": "Blade Whirlwind",
+            "skill_4": "Hidden Pursuit",
+            "passive": "Optical Camouflage"
+        }
     },
     {
-      "character": "Vepley",
-      "class": "Vanguard",
-      "mainweapon": "Vepr-12",
-      "desiredweapon": "Heart Seeker",
-      "attachments": ["Ballistic Boost"],
-      "helix": [1, 3, 2, 5, 6]
+        "character_id": 11,
+        "character": "Vepley",
+        "class": "Vanguard",
+        "mainweapon": "Vepr-12",
+        "desiredweapon": "Heart Seeker",
+        "attachments": ["Ballistic Boost"],
+        "helix": [1, 3, 2, 5, 6],
+        "stats": {
+            "heath": 1851,
+            "attack": 696,
+            "defence": 528,
+            "stability_gauge": 8,
+            "movement_speed": 8,
+            "attribute": "Shotgun",
+            "attribute_effect": null,
+            "weakness": "Heavy Type Bullet",
+            "weakness_effect": "Turbid"
+        },
+        "skills": {
+            "skill_1": "Live Interaction",
+            "skill_2": "All Out Performance",
+            "skill_3": "Exclusive Stage",
+            "skill_4": "Infectious Enthusiasm",
+            "passive": "Idol Talent"
+        }
     }
-  ]
-  
+]
