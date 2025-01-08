@@ -1,114 +1,111 @@
-const characterURL = 'Descriptions/characterdata.txt';
+const characterFiles = [
+    'data/Cheeta.json',
+    'data/Groza.json',
+    'data/Colphne.json',
+    'data/Krolik.json',
+    'data/Ksenia.json',
+    'data/Littara.json',
+    'data/Lotta.json',
+    'data/Makiatto.json',
+    'data/Mosin-Nagant.json',
+    'data/Nagant.json',
+    'data/Nemesis.json',
+    'data/Papasha.json',
+    'data/Peritya.json',
+    'data/Qiongjiu.json',
+    'data/Sabrina.json',
+    'data/Sharkry.json',
+    'data/Suomi.json',
+    'data/Tololo.json',
+    'data/Ullrid.json',
+    'data/Vepley.json'
+]
+
 let characterData = [];
 
-async function loadCharacterFile() {
+async function loadCharacterFiles() {
     try {
-        const characterResponse = await fetch(characterURL);
-
-        if (!characterResponse.ok) {
-            throw new Error("Failed to fetch the character file");
-        }
-
-        const characterText = await characterResponse.text();
-
-        characterData = parseCharacterData(characterText);
-        console.log("Character data loaded:", characterData);
-    }
-    catch(error) {
-        console.error("Error loading character file:", error);
-    }
-}
-
-function parseCharacterData(text) {
-    const data = [];
-    const characters = text.trim().replace(/\r/g, '').split("\n\n");
-
-    const propertyMap = {
-        "character:": "name",
-        "class:": "class",
-        "attachment:": "attachment",
-        "helix:": "helix",
-        "mainweapon:": "mainweapon",
-        "desiredweapon": "desiredweapon"
-    };
-
-    characters.forEach((characterBlock, index) => {
-        const lines = characterBlock.trim().split("\n").filter(line => line.trim() !== "");  // Remove empty lines
-        const characterObj = {};
-
-        lines.forEach(line => {
-            for (const prefix in propertyMap) {
-                if (line.startsWith(prefix)) {
-                    const property = propertyMap[prefix];
-                    characterObj[property] = line.replace(prefix, "").trim();
-                    break;
-                }
+        const characterPromises = characterFiles.map(async (filePath) => {
+            const response = await fetch(filePath);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch character file: ${filePath}`);
             }
+            return await response.json();
         });
 
-        if (characterObj.name && characterObj.class) {
-            data.push(characterObj);
-        }
-    });
+        // Wait for all files to load
+        const characters = await Promise.all(characterPromises);
+        characterData = characters.map((character) => character.character); // Assuming each JSON has a "character" key
 
-    return data;
+        console.log("All character data loaded:", characterData);
+    } catch (error) {
+        console.error("Error loading character files:", error);
+    }
 }
 
 async function initializeCharacters() {
     console.log("Initializing characters...");
     if (characterData.length === 0) {
-        await loadCharacterFile();
+        await loadCharacterFiles();
     }
-    else {
-        characterData.forEach(character => {
-            displayCharacter(character.name);
-        });
-    }
+
+    characterData.forEach((character) => {
+        createCharacterCard(character);
+    });
 }
 
-function displayCharacter(characterName) {
-    console.log('Displaying character:', characterName);
-    const character = characterData.find(c => c.name === characterName);
-    if (!character) {
-        console.error("Character not found:", characterName);
-        return;
-    }
-    // Set the character's name
-    setElementContent(`#${characterName}Card .character-name`, 'textContent', characterName, `${characterName} Name`);
+function createCharacterCard(character) {
+    const container = document.querySelector('.container');
 
-    // Set profile image
-    setElementContent(`#${characterName}Card .profile-image`, 'src', `Icons/${characterName}.PNG`, `${characterName} Profile`);
+    const card = document.createElement('div');
+    card.className = 'card',
+    card.id = '${character.character}Card';
+    card.onclick = () => flipCard(card);
 
-    // Set class image
-    setElementContent(`#${characterName}Card .class-image`, 'src', `Icons/${character.class}.PNG`, `${character.class} Class`);
+    const inner = document.createElement('div');
+    inner.className = 'inner';
 
-    // Set main weapon
-    setElementContent(`#${characterName}Card .gun-name`, 'textContent', character.mainweapon, `${characterName} Gun`);
+    const front = document.createElement('div');
+    front.className = 'front';
 
-    // Set weapon attachment
-    setElementContent(`#${characterName}Card .gunattachment-name`, 'textContent', character.attachment, `${characterName} Attachment`);
+    const characterName = document.createElement('h');
+    characterName.id = 'CharacterTitle';
+    characterName.className = 'character-name';
+    characterName.textContent = character.character;
+
+    const gunName = document.createElement('p');
+    gunName.id = 'Gun';
+    gunName.className = 'gun-name';
+    gunName.textContent = character.mainweapon;
+
+    const profileImage = document.createElement('img');
+    profileImage.src = `Icons/${character.character}.PNG`;
+    profileImage.className = 'profile-image';
+    profileImage.alt = `${character.character} Profile`;
+
+    const classImage = document.createElement('img');
+    classImage.src = `Icons/${character.class}.PNG`;
+    classImage.className = 'class-image';
+    classImage.alt = `${character.class} Class`;
+
+    const back = document.createElement('div');
+    back.className = 'back';
+
+    const backTitle = document.createElement('h1');
+    backTitle.textContent = 'Temp';
+
+    front.append(characterName, gunName, profileImage, classImage);
+    back.append(backTitle);
+    inner.append(front, back);
+    card.append(inner);
+    container.append(card);
 }
 
-//function setElementContent(NameCard, class name, type(src, text), alt text)
-function setElementContent(selector, property, content, altText='') {
-    const element = document.querySelector(selector);
-    if (element) {
-        element[property] = content;
-        if (altText) {
-            element.altText = altText;
-        }
-    }
-    else {
-        console.error(`${property} element not found for:`, characterName);
-    }
-}
-
-function flipCard(card){
+function flipCard(card) {
     card.classList.toggle('flipped');
-    const keyword = card.id.replace('Card', '');
 }
 
-document.addEventListener("DOMContentLoaded", async() => {
-    await loadCharacterFile();
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadCharacterFiles();
     initializeCharacters();
 });
