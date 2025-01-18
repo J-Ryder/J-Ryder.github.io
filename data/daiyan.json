@@ -3,9 +3,9 @@
         "character_id": 16,
         "character": "Daiyan",
         "class": "Vanguard",
-        "mainweapon": "",
-        "desiredweapon": "",
-        "attachments": "",
+        "mainweapon": "QBZ-95",
+        "desiredweapon": "Heavy String",
+        "attachments": ["Ballistic Boost"],
         "helix": [],
         "stats": {
             "heath": 1616,

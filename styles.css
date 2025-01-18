@@ -17,14 +17,14 @@
   .character-name{
     margin-top: 1%;
     color: white;
-    font-size: 5vh;
+    font-size: 1.5em;
     margin-bottom: 0;
     align-items: left;
   }
   .gun-name{
     margin-top: 1%;
     color: white;
-    font-size: 2vh;
+    font-size: 1.25em
     margin-bottom: 0;
     align-items: left;
   }
@@ -44,10 +44,10 @@
     max-width: 1200px;
   }
   .card {
-    flex: 1 1 300px;
+    /* flex: 1 1 350px; */
     min-width: 250px;
     max-width: 600;
-    height:500px;
+    height: 350;
     perspective: 1000px;
     position: relative;
   }
